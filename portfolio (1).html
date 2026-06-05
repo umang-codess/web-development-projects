@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>portfolio</title>
+  <style>
+  body {
+ height: 100vh;
+ display:flex;
+justify-content:center;
+align-items:center;
+
+}
+  .container {
+     border: 0.1px solid black;
+    height: 75vh;
+    width: 100vw;
+    border-radius: 15px;
+    background: rgba(255,255,255,0.15);
+   backdrop-filter: blur(70px);
+   box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+    
+  }
+    nav {
+      list-style: none;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+
+    }
+    nav li{
+      padding: 2px 2px 2px 2px;
+      background: white;
+      
+      
+    }
+    ul {
+      list-style: none;
+      display: flex;
+      gap: 10px;
+    }
+    .about{
+      font-size: 2rem;
+      padding: 20px;
+      margin-top: 20px;
+      line-height: 40px;
+    }
+   .umang img{
+     
+     box-shadow: 1px 1px 2px 3px;
+      position: relative;
+      bottom: ;
+      margin-left: 20px;
+      width: 150px;
+      border-radius: 100%;
+      filter: contrast(20px);
+      
+    }
+    button{
+      margin-top: 10%;
+      margin-left: 15px;
+      padding: 5px;
+      width: 40%;
+      font-size: 15px;
+      background: blue;
+      color: white;
+      border-radius: 9px;
+      border: 1px solid blue;
+      font-weight: bolder;
+      animation: magic 1s ease-in-out infinite;
+    }
+    span{
+      color: blue;
+      font-weight: bolder;
+    }
+    .image img{
+      margin-top: 40px;
+      margin-left: 15px;
+      width: 26px;
+    }
+    @keyframes magic{
+      from{
+        background: red;
+        transform: scale();
+      }
+      to{
+        background: blue;
+        transform: scale(95%);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <main>
+    <nav>
+      <li>Anshu</li>
+      <ul>
+        <li>Home</li>
+        <li>About</li>
+        <li>skills</li>
+        <li>work</li>
+        <li>contact</li>
+      </ul>
+    </nav>
+  </main> 
+  <div class="about">Hi, I'm <span> Umang </span>web developer
+</div>
+   <div class="umang"> <img src="umang.jpg" class="profile-pic" ></div>
+    </script>
+  <button> contact </button>
+    <div class="image"<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6YIRr2W9znfoH6zD1SV_6VxBsxXbsHb9cHHuAxzB03xGQbpXKOMGllXpz&s=10">
+      <img src="https://cdn-icons-png.flaticon.com/512/2111/2111432.png">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2KJ34dO3Vp7rp1UHEo4eO8VAFNoHKLI9mrw&s">
+    </div> 
+  </div>
+
+</body>
+
+</html>

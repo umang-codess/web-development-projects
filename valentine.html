@@ -1,0 +1,212 @@
+<!DOCTYPE html>  <html lang="en">  
+<head>  
+<meta charset="UTF-8">  
+<title>Our First Valentine ❤️</title>  
+<meta name="viewport" content="width=device-width, initial-scale=1">  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">  <style>  
+*{  
+margin:0;  
+padding:0;  
+box-sizing:border-box;  
+}  
+  
+body{  
+min-height:100vh;  
+background:radial-gradient(circle at top,#1b1b3a,#0f1023 70%);  
+font-family:'Poppins',sans-serif;  
+display:flex;  
+align-items:center;  
+justify-content:center;  
+overflow:hidden;  
+color:#fff;  
+}  
+  
+/* Floating Hearts */  
+.heart{  
+position:absolute;  
+bottom:-50px;  
+font-size:1.5rem;  
+animation:float 12s linear infinite;  
+opacity:0.6;  
+}  
+@keyframes float{  
+to{transform:translateY(-120vh); opacity:0;}  
+}  
+  
+/* Login */  
+.loginBox{  
+text-align:center;  
+background:rgba(255,255,255,0.05);  
+backdrop-filter:blur(12px);  
+padding:40px;  
+border-radius:18px;  
+box-shadow:0 20px 40px rgba(0,0,0,0.4);  
+animation:fadeIn 1.2s ease;  
+}  
+  
+.loginBox h2{  
+margin-bottom:15px;  
+font-weight:500;  
+}  
+  
+input{  
+padding:12px 18px;  
+border-radius:12px;  
+border:none;  
+outline:none;  
+width:220px;  
+font-size:1rem;  
+}  
+  
+button{  
+margin-top:15px;  
+padding:12px 28px;  
+border-radius:25px;  
+border:none;  
+cursor:pointer;  
+background:linear-gradient(135deg,#ff4d79,#ff7a8a);  
+color:white;  
+font-size:1rem;  
+transition:0.3s;  
+}  
+  
+button:hover{  
+transform:scale(1.05);  
+box-shadow:0 10px 25px rgba(255,77,121,0.4);  
+}  
+  
+/* Card */  
+.card{  
+width:90%;  
+max-width:650px;  
+background:rgba(255,255,255,0.08);  
+backdrop-filter:blur(16px);  
+border-radius:25px;  
+padding:45px 35px;  
+text-align:center;  
+box-shadow:0 30px 60px rgba(0,0,0,0.45);  
+display:none;  
+animation:slideUp 1.2s ease forwards;  
+max-height:85vh;  
+overflow-y:auto;  
+}  
+  
+h1{  
+font-family:'Playfair Display',serif;  
+font-size:2.5em;  
+margin-bottom:20px;  
+background:linear-gradient(90deg,#ff5f9e,#ffd1dc);  
+-webkit-background-clip:text;  
+-webkit-text-fill-color:transparent;  
+}  
+  
+#typewriter{  
+font-size:1.15em;  
+line-height:1.9;  
+margin-top:20px;  
+white-space:pre-wrap;  
+}  
+  
+/* Proposal */  
+.proposal{  
+margin-top:35px;  
+display:none;  
+animation:fadeIn 1s ease forwards;  
+}  
+  
+.proposal h2{  
+margin-bottom:20px;  
+font-weight:500;  
+}  
+  
+#finalText{  
+margin-top:18px;  
+font-size:1.1em;  
+color:#ffd1dc;  
+}  
+  
+@keyframes fadeIn{  
+from{opacity:0;}  
+to{opacity:1;}  
+}  
+  
+@keyframes slideUp{  
+from{opacity:0; transform:translateY(30px);}  
+to{opacity:1; transform:translateY(0);}  
+}  
+</style>  </head>  <body>  <!-- Floating hearts -->  <div class="heart" style="left:10%">❤️</div>  
+<div class="heart" style="left:30%;animation-delay:2s">💖</div>  
+<div class="heart" style="left:50%;animation-delay:4s">❤️</div>  
+<div class="heart" style="left:70%;animation-delay:6s">💞</div>  
+<div class="heart" style="left:90%;animation-delay:8s">❤️</div>  <div class="loginBox" id="loginBox">  
+<h2>Enter the Secret 💌</h2>  
+<input type="password" id="passwordInput" placeholder="Our special word">  
+<br>  
+<button onclick="checkPassword()">Unlock ❤️</button>  
+</div>  <div class="card" id="mainCard">  
+<h1>our 1st valentine❤️</h1>  <div id="typewriter"></div>  <div class="proposal" id="proposalBox">  
+<h2>Will you be my forever 💍</h2>  <button onclick="sayYes()">YES ❤️</button>
+<button onclick="sayNo()">NO 😳</button>
+
+<p id="finalText"></p>  
+</div>  
+</div>  <script>  
+function checkPassword(){  
+let pass=document.getElementById("passwordInput").value;  
+if(pass==="GULU GULU"){  
+document.getElementById("loginBox").style.display="none";  
+document.getElementById("mainCard").style.display="block";  
+startTyping();  
+}else{  
+alert("Wrong password madam ji 🤭");  
+}  
+}  
+  
+let messages = [  
+"Happy Valentine’s Day mere jaan Karthik ❤️",  
+  
+"Sach bataun…jab se aap meri life me aaye ho na, tab se bahut kuch change ho gaya hai. Aap se baat karna, aapki care, aapka support… ye sab mere din ka sabse acha part hota hai. Kabhi kabhi bas aapse thodi si baat ho jaye na, pura mood acha ho jata hai",  
+  
+"lekin Me kabhi kabhi aapka mood kharab karta hoon, kabhi overthink bhi kar leta hoon… but ek cheez dil se bol raha hoon ki main aapko bahut pyaar karta hu hadd se jyada aur aapko hamesha khush dekhna chahta hu any how",  
+  
+"Aap soch nhi sakti aapka presence mujhe kitna acha lagta hai, aapse baatein share karna kitna acha lagta hai, babu aap mere ghar jaisi ho aur ek din mere ghar ki laxmi bhi ban jayengi",  
+  
+"Main chahta hoon ki hum dono aise hi ek dusre ka sath dete rahe hamesha ke liye aur aap apne jindagi ka sara bacha hua valentine day mere sath manaye",  
+  
+"I really love you ❤️",  
+  
+" Ek last question🙈 👇🏻"  
+];  
+  
+let line=0,char=0;  
+let box=document.getElementById("typewriter");  
+  
+function startTyping(){  
+typeText();  
+}  
+  
+function typeText(){  
+if(line<messages.length){  
+if(char<messages[line].length){  
+box.innerHTML+=messages[line].charAt(char);  
+char++;  
+setTimeout(typeText,45);  
+}else{  
+box.innerHTML+="\n\n";  
+line++;  
+char=0;  
+setTimeout(typeText,350);  
+}  
+}else{  
+document.getElementById("proposalBox").style.display="block";  
+}  
+}  
+  
+function sayYes(){  
+document.getElementById("finalText").innerText="Ab ye Valentine sirf special nahi raha balki yaadgaar ban gaya, love you bubu❤️🙈";  
+}  
+  
+function sayNo(){  
+document.getElementById("finalText").innerText="bhakk, Chahe jo bhi ho meri Valentine hamesha aap hi rahogi Doraemon 🙈";  
+}  
+</script>  </body>  
+</html>  
